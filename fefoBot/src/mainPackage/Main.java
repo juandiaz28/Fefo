@@ -28,5 +28,6 @@ public class Main {
 
 		//so to speak this calls the commands
 		jda.addEventListener(new Commands());
+		//finished merge
 	}
 }
