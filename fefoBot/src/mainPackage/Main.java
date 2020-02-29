@@ -10,16 +10,23 @@ import net.dv8tion.jda.api.entities.Activity;
 
 public class Main {
 	public static JDA jda;
-	public static String string="Idk";
+	//this prefix is for analyzing the message and make sure it's a command
+	public static String prefix = "=";
+	//the static ensures we can reference it from the any class
+	//change this to change what the bot has in its activity
+	public static String currentlyListening="you";
 
 	//main method
 	public static void main(String[] args) throws LoginException {
 		//in the setToken "" goes the Bot Token accesed by discord dev
-		
+
 		//DO NOT SHARE TOKEN WITH ANYBODY
 		jda = new JDABuilder(AccountType.BOT).setToken("").build();
 		jda.getPresence().setStatus(OnlineStatus.ONLINE);
-		jda.getPresence().setActivity(Activity.listening("you"));
-		
+		jda.getPresence().setActivity(Activity.listening(currentlyListening));
+
+
+		//so to speak this calls the commands
+		jda.addEventListener(new Commands());
 	}
 }
