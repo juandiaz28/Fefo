@@ -14,8 +14,12 @@ public class Main {
 
 	//main method
 	public static void main(String[] args) throws LoginException {
-		jda = new JDABuilder(AccountType.BOT).setToken("NjgzMDA1MzI1MzE3NzY3MjU0.XllRTg.fxgSVokpBpKYV3o-vAP77wSQ-j0").build();
+		//in the setToken "" goes the Bot Token accesed by discord dev
+		
+		//DO NOT SHARE TOKEN WITH ANYBODY
+		jda = new JDABuilder(AccountType.BOT).setToken("").build();
 		jda.getPresence().setStatus(OnlineStatus.ONLINE);
 		jda.getPresence().setActivity(Activity.listening("you"));
+		
 	}
 }
