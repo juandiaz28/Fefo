@@ -17,7 +17,7 @@ public class BotInfo extends ListenerAdapter {
 	//events can be sending messages or adding reactions to messages
 	
 	public void onGuildMessageReceived(GuildMessageReceivedEvent event) {
-		String[]args =event.getMessage().getContentRaw().split(" ");
+		String[]args =event.getMessage().getContentRaw().split("\\s+");
 		
 		//the equalsIgnoreCase makes it so the lowercase or uppercase doesnt matter
 		if (args[0].equalsIgnoreCase(Main.prefix + "botinfo")) {
