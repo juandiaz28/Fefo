@@ -1,12 +1,18 @@
-package mainPackage;
+package commandsPackage;
 
+/*
+ * Created a new package for exclusive command usage
+ * The old Command.class in the mainPackage has been erased and is essentially this new class
+ * 
+ */
 import java.awt.Color;
 
+import mainPackage.Main;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
-public class Commands extends ListenerAdapter {
+public class BotInfo extends ListenerAdapter {
 	//ListenerAdapter registers events
 	//events can be sending messages or adding reactions to messages
 	

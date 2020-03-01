@@ -2,6 +2,7 @@ package mainPackage;
 
 import javax.security.auth.login.LoginException;
 
+import commandsPackage.BotInfo;
 import net.dv8tion.jda.api.AccountType;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -18,7 +19,7 @@ public class Main {
 
 	//main method
 	public static void main(String[] args) throws LoginException {
-		//in the setToken "" goes the Bot Token accesed by discord dev
+		//in the setToken "" goes the Bot Token accessed by discord dev
 
 		//DO NOT SHARE TOKEN WITH ANYBODY
 		jda = new JDABuilder(AccountType.BOT).setToken("").build();
@@ -27,7 +28,7 @@ public class Main {
 
 
 		//so to speak this calls the commands
-		jda.addEventListener(new Commands());
-		//finished merge test?
+		jda.addEventListener(new BotInfo());
+		
 	}
 }
