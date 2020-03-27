@@ -26,7 +26,7 @@ public class BotInfo extends ListenerAdapter {
 			botinfo.setTitle("Bot Stuff");
 			botinfo.setDescription("Important bot stuff for you since you're interested in me UwU ");
 			botinfo.addField("Information:","I am an assistant bot for your server that is currently undergoing development. \n Type =help if you need me.",false);
-			//info.addField("My creator: ", "Juan Díaz", false);
+			botinfo.addField("My creator: ", "Juan Díaz", false);
 			botinfo.addField("My github repo if you're interested: ", "https://github.com/juandiaz28/Fefo", false);
 			botinfo.setColor(Color.GREEN);
 			botinfo.setFooter("Created by Juan Díaz", event.getMember().getUser().getAvatarUrl());
@@ -37,7 +37,6 @@ public class BotInfo extends ListenerAdapter {
 			//new line
 			event.getChannel().sendMessage(botinfo.build()).queue();
 			//the clear helps clear the embed to save system resources
-			botinfo.clear();
 		}
 	}
 }

@@ -3,6 +3,7 @@ package mainPackage;
 import javax.security.auth.login.LoginException;
 
 import commandsPackage.BotInfo;
+import commandsPackage.Help;
 import eventsPackage.GuildMemberJoined;
 import eventsPackage.GuildMemberLeave;
 import net.dv8tion.jda.api.AccountType;
@@ -31,6 +32,8 @@ public class Main {
 
 		//so to speak this calls the commands
 		jda.addEventListener(new BotInfo());
+		//adding help call
+		jda.addEventListener(new Help());
 		//adding a call to the adding new users to server
 		jda.addEventListener(new GuildMemberJoined());
 		//para cuando se va
