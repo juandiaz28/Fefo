@@ -24,8 +24,8 @@ public class Help extends ListenerAdapter{
 			help.addField("My creator: ", "Juan Díaz", false);
 			help.addField("My github repo if you're interested: ", "https://github.com/juandiaz28/Fefo", false);
 			help.setColor(Color.ORANGE);
-			help.setFooter("Created by Juan Díaz", event.getMember().getUser().getAvatarUrl());
-			
+			help.setFooter("Created by Juan Díaz", null);
+			//event.getMember().getUser().getAvatarUrl()
 			event.getChannel().sendTyping().queue();
 			//original line when typing =info
 			//event.getChannel().sendMessage("Hey there, what do you need help with?").queue();

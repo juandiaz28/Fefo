@@ -24,6 +24,6 @@ public class GuildMemberJoined extends ListenerAdapter{
 		event.getGuild().getDefaultChannel().sendMessage(join.build()).queue();
 		
 		//this is for adding role when someone joins
-		event.getGuild().modifyMemberRoles(event.getMember(), event.getGuild().getRolesByName("Simp-Level", true)).complete();
+		event.getGuild().modifyMemberRoles(event.getMember(), event.getGuild().getRolesByName("Simp", true)).complete();
 	}
 }

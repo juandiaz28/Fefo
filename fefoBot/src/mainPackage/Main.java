@@ -6,6 +6,7 @@ import commandsPackage.BotInfo;
 import commandsPackage.Help;
 import eventsPackage.GuildMemberJoined;
 import eventsPackage.GuildMemberLeave;
+import eventsPackage.GuildMessageReceived;
 import net.dv8tion.jda.api.AccountType;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -30,7 +31,9 @@ public class Main {
 		jda.getPresence().setActivity(Activity.listening(currentlyListening));
 
 
-		//so to speak this calls the commands
+		//so to speak this calls the commands jda.addEventListener
+		jda.getSelfUser();
+		
 		jda.addEventListener(new BotInfo());
 		//adding help call
 		jda.addEventListener(new Help());
@@ -38,5 +41,7 @@ public class Main {
 		jda.addEventListener(new GuildMemberJoined());
 		//para cuando se va
 		jda.addEventListener(new GuildMemberLeave());
+		//message received
+		jda.addEventListener(new GuildMessageReceived());
 	}
 }

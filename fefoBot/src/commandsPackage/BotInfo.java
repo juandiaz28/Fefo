@@ -29,7 +29,7 @@ public class BotInfo extends ListenerAdapter {
 			botinfo.addField("My creator: ", "Juan Díaz", false);
 			botinfo.addField("My github repo if you're interested: ", "https://github.com/juandiaz28/Fefo", false);
 			botinfo.setColor(Color.GREEN);
-			botinfo.setFooter("Created by Juan Díaz", event.getMember().getUser().getAvatarUrl());
+			botinfo.setFooter("Created by Juan Díaz", null);
 			
 			event.getChannel().sendTyping().queue();
 			//original line when typing =info
