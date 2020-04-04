@@ -14,8 +14,8 @@ public class GuildMessageReceived extends ListenerAdapter{
 
 //If conditional Ensures the bot doesn't get stuck in a loop from it's own event
 				if(!event.getMember().getUser().equals(event.getJDA().getSelfUser())) {
-					msg.setTitle("Title");
-					msg.addField("idk",thing,false);
+					msg.setTitle("Repeating what you got");
+					msg.addField("Test with ids",thing,false);
 					event.getChannel().sendTyping().queue();
 					event.getChannel().sendMessage(msg.build()).queue();
 				}

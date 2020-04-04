@@ -2,8 +2,9 @@ package mainPackage;
 
 import javax.security.auth.login.LoginException;
 
-import commandsPackage.BotInfo;
-import commandsPackage.Help;
+import commands.General.BotInfo;
+import commands.General.Commands;
+import commands.General.Help;
 import eventsPackage.GuildMemberJoined;
 import eventsPackage.GuildMemberLeave;
 import eventsPackage.GuildMessageReceived;
@@ -37,6 +38,9 @@ public class Main {
 		jda.addEventListener(new BotInfo());
 		//adding help call
 		jda.addEventListener(new Help());
+		
+		jda.addEventListener(new Commands());
+		
 		//adding a call to the adding new users to server
 		jda.addEventListener(new GuildMemberJoined());
 		//para cuando se va

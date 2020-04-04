@@ -1,4 +1,4 @@
-package commandsPackage;
+package commands.General;
 
 import java.awt.Color;
 
@@ -18,7 +18,7 @@ public class Help extends ListenerAdapter{
 		if (args[0].equalsIgnoreCase(Main.prefix + "help")) {
 			//Instantiating an embededbuilder object
 			EmbedBuilder help=new EmbedBuilder();
-			help.setTitle("Help Stuff");
+			help.setTitle("You need my help? UwU");
 			help.setDescription("DESCRIPTION TO BE FILLED AS IT GOES");
 			help.addField("Information:","TO BE FILLED",false);
 			help.addField("My creator: ", "Juan Díaz", false);
