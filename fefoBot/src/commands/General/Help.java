@@ -19,12 +19,12 @@ public class Help extends ListenerAdapter{
 			//Instantiating an embededbuilder object
 			EmbedBuilder help=new EmbedBuilder();
 			help.setTitle("You need my help? UwU");
-			help.setDescription("DESCRIPTION TO BE FILLED AS IT GOES");
-			help.addField("Information:","TO BE FILLED",false);
-			help.addField("My creator: ", "Juan Díaz", false);
-			help.addField("My github repo if you're interested: ", "https://github.com/juandiaz28/Fefo", false);
+			help.addField("General help:", "Whenever a command requires a [parameter] you don't need to write the brackets, just the value.\n "
+					+ "For example: '=random 0 10' is a valid command",false);
+			help.addField("If you want my info type:"," '=botinfo' ",false);
+			help.addField("If you want my command list type: ", " '=commands' ", false);
+			
 			help.setColor(Color.ORANGE);
-			help.setFooter("Created by Juan Díaz", null);
 			//event.getMember().getUser().getAvatarUrl()
 			event.getChannel().sendTyping().queue();
 			//original line when typing =info

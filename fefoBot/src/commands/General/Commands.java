@@ -17,8 +17,8 @@ public class Commands extends ListenerAdapter{
 	
 			commandsEmbed.setTitle("Want to call me?");
 			commandsEmbed.setDescription("Here are my commands! \n Remember to use the prefix '=' (e.g. '=botinfo').");
-			commandsEmbed.addField("General Commands:"," '=botinfo':Get my information! \n '=help': Call for my assistance!",false);
-			commandsEmbed.addField("Mathematical Commands:"," '=random[min][max]':[TO BE IMPLEMENTED] ",false);
+			commandsEmbed.addField("General Commands: "," '=botinfo':Get my information! \n '=help': Call for my assistance!",false);
+			commandsEmbed.addField("Mathematical Commands: "," '=random [min] [max]': Generate a randon number between [min] and [max] ",false);
 			
 			commandsEmbed.setColor(Color.GREEN);
 			

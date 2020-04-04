@@ -1,10 +1,13 @@
 package mainPackage;
 
+
+
 import javax.security.auth.login.LoginException;
 
 import commands.General.BotInfo;
 import commands.General.Commands;
 import commands.General.Help;
+import commands.Mathematical.RandGenerator;
 import eventsPackage.GuildMemberJoined;
 import eventsPackage.GuildMemberLeave;
 import eventsPackage.GuildMessageReceived;
@@ -27,19 +30,28 @@ public class Main {
 		//in the setToken "" goes the Bot Token accessed by discord dev
 
 		//DO NOT SHARE TOKEN WITH ANYBODY
-		jda = new JDABuilder(AccountType.BOT).setToken("").build();
+		jda = new JDABuilder(AccountType.BOT).setToken("NjgzMDA1MzI1MzE3NzY3MjU0.XofJEg.MqPICTZZ5Zc_Y9A6nw5_8RcF4l8").build();
 		jda.getPresence().setStatus(OnlineStatus.ONLINE);
 		jda.getPresence().setActivity(Activity.listening(currentlyListening));
-
-
 		//so to speak this calls the commands jda.addEventListener
 		jda.getSelfUser();
+
+		
+
+		
+		//START OF COMMANDS
 		
 		jda.addEventListener(new BotInfo());
-		//adding help call
+
 		jda.addEventListener(new Help());
 		
 		jda.addEventListener(new Commands());
+		
+		jda.addEventListener(new RandGenerator());
+		//END OF COMMANDS
+
+		
+		//START OF NATURAL EVENTS
 		
 		//adding a call to the adding new users to server
 		jda.addEventListener(new GuildMemberJoined());
@@ -47,5 +59,9 @@ public class Main {
 		jda.addEventListener(new GuildMemberLeave());
 		//message received
 		jda.addEventListener(new GuildMessageReceived());
+		
+		//END OF NATURAL EVENTS
+		
+		
 	}
 }
