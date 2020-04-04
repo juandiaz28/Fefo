@@ -30,7 +30,7 @@ public class Main {
 		//in the setToken "" goes the Bot Token accessed by discord dev
 
 		//DO NOT SHARE TOKEN WITH ANYBODY
-		jda = new JDABuilder(AccountType.BOT).setToken("NjgzMDA1MzI1MzE3NzY3MjU0.XofJEg.MqPICTZZ5Zc_Y9A6nw5_8RcF4l8").build();
+		jda = new JDABuilder(AccountType.BOT).setToken("").build();
 		jda.getPresence().setStatus(OnlineStatus.ONLINE);
 		jda.getPresence().setActivity(Activity.listening(currentlyListening));
 		//so to speak this calls the commands jda.addEventListener
